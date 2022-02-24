@@ -1,0 +1,77 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+
+    <title>HSK1 random char</title>
+  </head>
+  <body>
+
+
+	<div class="container">
+
+		
+		<div id="myRandomDiv" class="container-fluid" style="font-size:100px">
+		</div>
+
+		<div id="myRandomPinyinDiv" class="container-fluid" style="font-size:50px">
+		</div>
+
+		<div id="myRandomDefDiv" class="container-fluid">
+
+		</div>
+		<br>
+		<a id="myButton" class="btn btn-primary" href="#" role="button">HSK1</a>
+	</div>
+
+
+    <!-- Optional JavaScript; choose one of the two! -->
+
+    <!-- Option 1: Bootstrap Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+
+    <!-- Option 2: Separate Popper and Bootstrap JS -->
+    <!--
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js" integrity="sha384-7+zCNj/IqJ95wo16oMtfsKbZ9ccEh31eOz1HGyDuCQ6wgnyJNSYdrPa03rtR1zdB" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js" integrity="sha384-QJHtvGhmr9XOIpI6YVutG+2QOK9T+ZnN4kzFN1RtK3zEFEIsxhlmWl5/YESvpZ13" crossorigin="anonymous"></script>
+    -->
+	
+	
+	<script type="text/javascript" charset="utf-8">
+
+
+	var hsk1 = ['起', '果', '热', '院', '四', '回', '西', '国', '高', '怎', '系', '北', '一', '七', '三', '上', '下', '不', '东', '子', '医', '字', '个', '十', '中', '午', '气', '学', '么', '开', '水', '九', '习', '书', '汉', '雨', '买', '见', '视', '零', '觉', '了', '二', '在', '五', '些', '生', '坐', '电', '块', '影', '很', '校', '客', '样', '家', '桌', '去', '京', '亮', '想', '友', '人', '没', '什', '对', '今', '叫', '他', '们', '面', '候', '苹', '做', '小', '少', '吃', '同', '名', '后', '吗', '听', '会', '爱', '爸', '租', '呢', '住', '岁', '作', '你', '和', '茶', '椅', '的', '车', '站', '那', '钟', '哪', '狗', '认', '识', '话', '日', '都', '语', '时', '菜', '说', '请', '读', '儿', '先', '钱', '我', '八', '六', '老', '关', '兴', '这', '再', '写', '打', '商', '猫', '谁', '明', '星', '昨', '飞', '谢', '是', '喂', '多', '喜', '喝', '大', '天', '冷', '看', '太', '几', '出', '女', '她', '好', '睡', '妈', '工', '现', '衣', '能', '里', '分', '饭', '馆', '姐', '前', '欢', '师', '脑', '火', '漂', '月', '有', '朋', '服', '年', '期', '本', '米', '店', '机', '来', '杯', '点']
+    var hsk1_pinyin = ['qǐ', 'guǒ', 'rè', 'yuàn', 'sì', 'húi', 'xī', 'guó', 'gāo', 'zěn', 'xì', 'běi', 'yī', 'qī', 'sān', 'shàng', 'xià', 'bù', 'dōng', 'zǐ', 'yì', 'zì', 'gè', 'shí', 'zhōng', 'wǔ', 'qì', 'xué', 'yāo', 'kāi', 'shǔi', 'jǐu', 'xí', 'shū', 'hàn', 'yǔ', 'mǎi', 'jiàn', 'shì', 'líng', 'jué', 'le', 'èr', 'zài', 'wǔ', 'xiē', 'shēng', 'zuò', 'diàn', 'kuài', 'yǐng', 'hěn', 'xiào', 'kè', 'yáng', 'jiā', 'zhuō', 'qù', 'jīng', 'liàng', 'xiǎng', 'yǒu', 'rén', 'méi', 'shí', 'dùi', 'jīn', 'jiào', 'tā', 'men', 'miàn', 'hòu', 'píng', 'zuò', 'xiǎo', 'shǎo', 'chī', 'tóng', 'míng', 'hòu', 'ma', 'tīng', 'hùi', 'ài', 'bà', 'zū', 'ní', 'zhù', 'sùi', 'zuò', 'nǐ', 'hé', 'chá', 'yǐ', 'de', 'chē', 'zhàn', 'nà', 'zhōng', 'nǎ', 'gǒu', 'rèn', 'shì', 'huà', 'rì', 'dū', 'yǔ', 'shí', 'cài', 'shuō', 'qǐng', 'dú', 'ér', 'xiān', 'qián', 'wǒ', 'bā', 'lìu', 'lǎo', 'guān', 'xīng', 'zhè', 'zài', 'xiě', 'dǎ', 'shāng', 'māo', 'shúi', 'míng', 'xīng', 'zuó', 'fēi', 'xiè', 'shì', 'wèi', 'duō', 'xǐ', 'hē', 'dà', 'tiān', 'lěng', 'kàn', 'tài', 'jī', 'chū', 'nv̌', 'tā', 'hǎo', 'shùi', 'mā', 'gōng', 'xiàn', 'yī', 'néng', 'lǐ', 'fēn', 'fàn', 'guǎn', 'jiě', 'qián', 'huān', 'shī', 'nǎo', 'huǒ', 'piāo', 'yuè', 'yǒu', 'péng', 'fú', 'nián', 'qī', 'běn', 'mǐ', 'diàn', 'jī', 'lái', 'bēi', 'diǎn']
+    var hsk1_def = ['to rise', 'fruit', 'to warm up', 'courtyard', 'four', 'to circle', 'the West', 'surname Guo', 'surname Gao', 'how', 'to connect', 'north', 'one', 'seven', 'surname San', 'see 上聲|上声[shang3 sheng1]', 'down', '(negative prefix)', 'surname Dong', 'son', 'medical', 'letter', 'individual', 'ten', 'China', '7th earthly branch: 11 a.m.-1 p.m., noon, 5th solar month (6th June-6th July), year of the Horse', 'gas', 'to learn', 'exclamatory final particle', 'to open', 'surname Shui', 'nine', 'surname Xi', 'abbr. for 書經|书经[Shu1 jing1]', 'Han ethnic group', 'rain', 'to buy', 'to see', 'variant of 視|视[shi4]', 'zero', 'a nap', '(modal particle intensifying preceding clause)', 'two', '(located) at', 'five', 'some', 'to be born', 'surname Zuo', 'electric', 'lump (of earth)', 'picture', '(adverb of degree)', 'to proofread', 'customer', 'manner', 'see 傢伙|家伙[jia1 huo5]', 'table', 'to go', 'abbr. for Beijing', 'bright', 'to think', 'friend', 'man', '(negative prefix for verbs)', 'what', 'right', 'today', 'to shout', 'he or him', 'plural marker for pronouns, and nouns referring to individuals', 'face', 'to wait', '(artemisia)', 'to do', 'small', 'few', 'to eat', '(used in given names)', 'name', 'surname Hou', 'see 嗎啡|吗啡, morphine', 'smile (archaic)', 'can', 'to love', 'father', 'to hire', 'particle indicating that a previously asked question is to be applied to the preceding word ("What about ...?", "And ...?")', 'to live', 'variant of 歲|岁[sui4], year', 'worker', 'you (informal, as opposed to courteous 您[nin2])', 'old variant of 和[he2]', 'tea', 'chair', 'of', 'surname Che', 'station', 'surname Na', 'surname Zhong', 'how', 'dog', 'to recognize', 'to know', 'dialect', 'abbr. for 日本[Ri4 ben3], Japan', 'surname Du', 'dialect', 'old variant of 時|时[shi2]', 'dish (type of food)', 'to persuade', 'to ask', 'comma', 'child', 'early', 'surname Qian', 'I', 'eight', 'six', 'prefix used before the surname of a person or a numeral indicating the order of birth of the children in a family or to indicate affection or familiarity', 'surname Guan', 'surname Xing', 'this', 'again', 'to write', 'dozen (loanword)', 'Shang Dynasty (c. 1600-1046 BC)', 'cat', 'who', 'Ming Dynasty (1368-1644)', 'star', 'yesterday', 'to fly', 'surname Xie', 'is', 'hello (when answering the phone)', 'many', 'to be fond of', 'to drink', 'big', 'day', 'surname Leng', 'to look after', 'highest', 'small table', 'to go out', 'archaic variant of 汝[ru3]', 'she', 'good', 'to sleep', 'ma', 'work', 'to appear', 'clothes', 'surname Neng', 'variant of 裡|里[li3]', 'to divide', 'food', 'variant of 館|馆[guan3]', 'older sister', 'front', 'variant of 歡|欢[huan1]', 'surname Shi', 'brain', 'surname Huo', 'to float', 'moon', 'to have', 'friend', 'clothes', 'surname Nian', 'variant of 期[qi1]', 'root', 'surname Mi', 'inn', 'surname Ji', 'to come', 'cup', 'point']
+
+
+		var randomDiv = document.getElementById("myRandomDiv");
+		var randomPinyinDiv = document.getElementById("myRandomPinyinDiv");
+		var randomDefDiv = document.getElementById("myRandomDefDiv");
+		randomDiv.innerHTML = "一"; 
+		randomPinyinDiv.innerHTML= "Yī";
+		randomDefDiv.innerHTML= "One";
+		//一二三四五Yī'èrsānsìwǔ
+
+
+		document.getElementById("myButton").addEventListener("click", function() {
+			  randomIndex = Math.ceil((Math.random()*hsk1.length-1));
+			  newText = hsk1[randomIndex];
+			  newTextPinyin = hsk1_pinyin[randomIndex];
+			  newTextDef = hsk1_def[randomIndex];
+			  randomDiv.innerHTML = newText;
+			  randomPinyinDiv.innerHTML = newTextPinyin;
+			  randomDefDiv.innerHTML = newTextDef;
+		});
+	</script> 
+  </body>
+</html>
+
+
+
+   
