@@ -99,7 +99,7 @@
 
 
 		
-		document.getElementById("myButton").addEventListener("click", function() {
+		document.body.addEventListener("click", function() {
 		      
 			 
 			  
@@ -126,7 +126,7 @@
 			  }
 			  else {hsk1_rem.splice(hsk1_rem[randomIndex],1); hsk1_pinyin_rem.splice(hsk1_rem[randomIndex],1); hsk1_def_rem.splice(hsk1_rem[randomIndex],1);}
                                          
-		});                              
+		}, true);                              
 		
 
 		
