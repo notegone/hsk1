@@ -10,27 +10,42 @@
 
     <title>HSK1 random char</title>
   </head>
+  <style>
+  .list-group-item:empty{
+    display:none;
+  }
+  </style>
   <body>
 
 
 	<div class="container">
-
+        <br><br>
+		<div class="progress">
+			<div id="progressbar" class="progress-bar" role="progressbar"></div>
+		</div>
 		
 		<div id="myRandomDiv" class="container-fluid" style="font-size:100px">
 		</div>
 
 		<div id="myRandomPinyinDiv" class="container-fluid" style="font-size:50px">
 		</div>
-
-		<div id="myRandomDefDiv" class="container-fluid">
-
-		</div>
-		<br>
+		
+		<br><br>
+		
 		<a id="myButton" class="btn btn-primary" href="#" role="button">HSK1</a>
+		
+		<br><br>
+		
+		<ul class="list-group list-group-flush">
+		  <li class="list-group-item"><div id="myRandomDefDiv" ></div></li>
+		  <li class="list-group-item"><div id="myRandomDef2Div" ></div>	</li>
+		  <li class="list-group-item"><div id="myRandomDef3Div" ></div>	</li>
+		  <li class="list-group-item"><div id="myRandomDef4Div" ></div></li>
+		</ul>	
+		<br>
+
 		<br><br><br><br><br>
-		<div class="progress">
-			<div id="progressbar" class="progress-bar" role="progressbar"></div>
-		</div>
+
 	</div>
 
 
@@ -53,18 +68,33 @@
     var hsk1_pinyin = ['qǐ', 'guǒ', 'rè', 'yuàn', 'sì', 'húi', 'xī', 'guó', 'gāo', 'zěn', 'xì', 'běi', 'yī', 'qī', 'sān', 'shàng', 'xià', 'bù', 'dōng', 'zǐ', 'yì', 'zì', 'gè', 'shí', 'zhōng', 'wǔ', 'qì', 'xué', 'yāo', 'kāi', 'shǔi', 'jǐu', 'xí', 'shū', 'hàn', 'yǔ', 'mǎi', 'jiàn', 'shì', 'líng', 'jué', 'le', 'èr', 'zài', 'wǔ', 'xiē', 'shēng', 'zuò', 'diàn', 'kuài', 'yǐng', 'hěn', 'xiào', 'kè', 'yáng', 'jiā', 'zhuō', 'qù', 'jīng', 'liàng', 'xiǎng', 'yǒu', 'rén', 'méi', 'shí', 'dùi', 'jīn', 'jiào', 'tā', 'men', 'miàn', 'hòu', 'píng', 'zuò', 'xiǎo', 'shǎo', 'chī', 'tóng', 'míng', 'hòu', 'ma', 'tīng', 'hùi', 'ài', 'bà', 'zū', 'ní', 'zhù', 'sùi', 'zuò', 'nǐ', 'hé', 'chá', 'yǐ', 'de', 'chē', 'zhàn', 'nà', 'zhōng', 'nǎ', 'gǒu', 'rèn', 'shì', 'huà', 'rì', 'dū', 'yǔ', 'shí', 'cài', 'shuō', 'qǐng', 'dú', 'ér', 'xiān', 'qián', 'wǒ', 'bā', 'lìu', 'lǎo', 'guān', 'xīng', 'zhè', 'zài', 'xiě', 'dǎ', 'shāng', 'māo', 'shúi', 'míng', 'xīng', 'zuó', 'fēi', 'xiè', 'shì', 'wèi', 'duō', 'xǐ', 'hē', 'dà', 'tiān', 'lěng', 'kàn', 'tài', 'jī', 'chū', 'nv̌', 'tā', 'hǎo', 'shùi', 'mā', 'gōng', 'xiàn', 'yī', 'néng', 'lǐ', 'fēn', 'fàn', 'guǎn', 'jiě', 'qián', 'huān', 'shī', 'nǎo', 'huǒ', 'piāo', 'yuè', 'yǒu', 'péng', 'fú', 'nián', 'qī', 'běn', 'mǐ', 'diàn', 'jī', 'lái', 'bēi', 'diǎn']
     var hsk1_def = ['to rise', 'fruit', 'to warm up', 'courtyard', 'four', 'to circle', 'the West', 'surname Guo', 'surname Gao', 'how', 'to connect', 'north', 'one', 'seven', 'surname San', 'see 上聲|上声[shang3 sheng1]', 'down', '(negative prefix)', 'surname Dong', 'son', 'medical', 'letter', 'individual', 'ten', 'China', '7th earthly branch: 11 a.m.-1 p.m., noon, 5th solar month (6th June-6th July), year of the Horse', 'gas', 'to learn', 'exclamatory final particle', 'to open', 'surname Shui', 'nine', 'surname Xi', 'abbr. for 書經|书经[Shu1 jing1]', 'Han ethnic group', 'rain', 'to buy', 'to see', 'variant of 視|视[shi4]', 'zero', 'a nap', '(modal particle intensifying preceding clause)', 'two', '(located) at', 'five', 'some', 'to be born', 'surname Zuo', 'electric', 'lump (of earth)', 'picture', '(adverb of degree)', 'to proofread', 'customer', 'manner', 'see 傢伙|家伙[jia1 huo5]', 'table', 'to go', 'abbr. for Beijing', 'bright', 'to think', 'friend', 'man', '(negative prefix for verbs)', 'what', 'right', 'today', 'to shout', 'he or him', 'plural marker for pronouns, and nouns referring to individuals', 'face', 'to wait', '(artemisia)', 'to do', 'small', 'few', 'to eat', '(used in given names)', 'name', 'surname Hou', 'see 嗎啡|吗啡, morphine', 'smile (archaic)', 'can', 'to love', 'father', 'to hire', 'particle indicating that a previously asked question is to be applied to the preceding word ("What about ...?", "And ...?")', 'to live', 'variant of 歲|岁[sui4], year', 'worker', 'you (informal, as opposed to courteous 您[nin2])', 'old variant of 和[he2]', 'tea', 'chair', 'of', 'surname Che', 'station', 'surname Na', 'surname Zhong', 'how', 'dog', 'to recognize', 'to know', 'dialect', 'abbr. for 日本[Ri4 ben3], Japan', 'surname Du', 'dialect', 'old variant of 時|时[shi2]', 'dish (type of food)', 'to persuade', 'to ask', 'comma', 'child', 'early', 'surname Qian', 'I', 'eight', 'six', 'prefix used before the surname of a person or a numeral indicating the order of birth of the children in a family or to indicate affection or familiarity', 'surname Guan', 'surname Xing', 'this', 'again', 'to write', 'dozen (loanword)', 'Shang Dynasty (c. 1600-1046 BC)', 'cat', 'who', 'Ming Dynasty (1368-1644)', 'star', 'yesterday', 'to fly', 'surname Xie', 'is', 'hello (when answering the phone)', 'many', 'to be fond of', 'to drink', 'big', 'day', 'surname Leng', 'to look after', 'highest', 'small table', 'to go out', 'archaic variant of 汝[ru3]', 'she', 'good', 'to sleep', 'ma', 'work', 'to appear', 'clothes', 'surname Neng', 'variant of 裡|里[li3]', 'to divide', 'food', 'variant of 館|馆[guan3]', 'older sister', 'front', 'variant of 歡|欢[huan1]', 'surname Shi', 'brain', 'surname Huo', 'to float', 'moon', 'to have', 'friend', 'clothes', 'surname Nian', 'variant of 期[qi1]', 'root', 'surname Mi', 'inn', 'surname Ji', 'to come', 'cup', 'point']
 	
+	var hsk1_def2 = ['to raise', 'result', 'to heat up', 'institution', '4', 'to go back', 'abbr. for Spain 西班牙[Xi1 ban1 ya2]', '', '', '', 'to relate to', 'to be defeated (classical)', '1', '7', '', '', 'downwards', 'not', '', 'child', 'medicine', 'symbol', 'this', '10', 'Chinese', 'ancient Chinese compass point: 180° (south)', 'air', 'to study', '', 'to start', '', '9', '', '', 'Chinese (language)', 'CL:陣|阵[zhen4],場|场[chang2]', 'to purchase', 'to meet', 'variant of 示[shi4]', 'nought', 'a sleep', '(completed action marker)', '2', '(to be) in', '5', 'few', 'to give birth', '', 'electricity', 'chunk', 'image', 'quite', 'to check', 'visitor', 'pattern', '', 'desk', 'to go to (a place)', 'surname Jing', 'clear', 'to believe', '', 'person', 'have not', '', 'correct', 'modern', 'to call', '(used for either sex when the sex is unknown or unimportant)', '', 'side', 'to inquire after', 'duckweed', 'to make', 'tiny', 'less', 'to consume', 'variant of 同[tong2]', 'noun (part of speech)', '', '', '', 'to be possible', 'to be fond of', 'dad', 'to rent', 'particle for inquiring about location ("Where is ...?")', 'to dwell', 'years old', 'workshop', '', '', 'tea plant', '', "~'s (possessive particle)", '', 'to stand', '', '', 'which', 'CL:隻|只[zhi1],條|条[tiao2]', 'to know', 'knowledge', 'language', '', '', 'language', '', 'vegetable', '', 'to invite', 'phrase marked by pause', 'son', 'prior', '', 'me', '8', '6', 'old (of people)', '', '', 'these', 'once more', '', '', 'surname Shang', 'CL:隻|只[zhi1]', 'also pr. [shui2]', 'surname Ming', 'heavenly body', '', '', '', 'are', '', 'much', 'to like', 'My goodness!', 'huge', 'sky', '', 'to take care of', 'greatest', '', 'to come out', '', '', 'well', 'to lie down', 'mom', 'worker', 'present', 'CL:件[jian4]', '', '', 'to separate', 'cuisine', '', '', 'forward', '', '', 'mind', '', 'to drift', 'month', 'there is', '', 'dress', '', 'period', 'stem', '', 'shop', '', 'to arrive', 'trophy cup', 'dot']
+	
+	var hsk1_def3 = ['to get up', 'resolute', 'hot (of weather)', 'CL:個|个[ge4]', '', 'to turn around', 'Spanish', '', '', '', 'to tie up', '', 'single', '', '', '', 'below', 'no', '', 'seed', 'doctor', 'character', 'that', '', 'surname Zhong', '', 'smell', 'to imitate', '', 'to turn on', '', '', '', '', 'the Han dynasty (206 BC-220 AD)', '', '', 'to appear (to be sth)', '', 'zero sign', 'CL:場|场[chang2]', '', '(Beijing dialect) stupid', 'to exist', '', 'several', 'life', '', 'electrical', 'piece', 'film', 'very', 'to compare', 'guest', 'way', '', 'classifier for tables of guests at a banquet etc', '(of a time etc) last', 'Jing ethnic minority', 'resonant', 'to suppose', '', 'people', 'not', '', 'couple', 'present', 'to order', "(used before sb's name for emphasis)", '', 'surface', 'to watch', '', 'to produce', 'few', 'to lack', 'to eat at (a cafeteria etc)', '', 'place (e.g. among winners)', '', '', '', 'to be able to', 'to like', 'pa', 'to charter', 'particle signaling a pause, to emphasize the preceding words and allow the listener time to take them on board ("ok?", "are you with me?")', 'to stay', '', '(slang) troublesome', '', '', 'CL:杯[bei1],壺|壶[hu2]', '', '(used after an attribute)', '', 'to halt', '', '', '', '', 'to admit', 'Taiwan pr. [shi4]', 'spoken words', '', '', 'speech', '', 'cuisine', '', 'please (do sth)', '', '', 'former', '', 'my', '', '', 'venerable (person)', '', '', '(commonly pr. [zhei4] before a classifier, esp. in Beijing)', 're-', '', '', '', '(dialect) to hide oneself', '', 'Ming (c. 2000 BC), fourth of the legendary Flame Emperors, 炎帝[Yan2 di4] descended from Shennong 神農|神农[Shen2 nong2] Farmer God', 'satellite', '', '', '', 'am', '', 'often', 'to enjoy', '', 'large', 'heaven', '', 'to watch', 'too (much)', '', 'to occur', '', '', 'proper', '', 'mother', 'skill', 'now', '', '', '', 'to distribute', 'cooked rice', '', '', 'ahead', '', '', 'head', '', '', 'monthly', 'there are', '', 'garment', '', 'cycle', 'origin', '', 'store', '', 'to come round', 'classifier for certain containers of liquids: glass, cup', 'drop']
+	
+	var hsk1_def4 = ['to set out', 'indeed', 'heat', '', '', 'to answer', '', '', '', '', 'to bind', '', 'a (article)', '', '', '', 'lower', '', '', 'egg', 'to cure', 'word', 'size', '', '', '', 'weather', 'science', '', 'to boil', '', '', '', '', '', '', '', 'to interview', '', 'fractional', '', '', '', 'in the middle of doing sth', '', 'measure word indicating a small amount or small number (greater than 1)', 'to grow', '', '', 'classifier for pieces of cloth, cake, soap etc', 'movie', 'awfully', '', '', 'appearance', '', '', 'just passed', '', 'to shine', 'to wish', '', 'CL:個|个[ge4],位[wei4]', '', '', 'pair', 'current', 'to ask', '(used as a meaningless mock object)', '', 'aspect', 'season', '', 'to write', 'young', 'to be missing', 'to eradicate', '', 'famous', '', '', '', 'will', 'affection', 'papa', 'to rent out', '(at the end of a declarative sentence) particle indicating continuation of a state or action', 'to reside', '', 'high-maintenance (person)', '', '', '', '', '(used to form a nominal expression)', '', 'to stop', '', '', '', '', '', '', 'speech', '', '', '', '', 'CL:盤|盘[pan2],道[dao4]', '', 'to treat (to a meal etc)', '', '', 'in advance', '', '', '', '', 'experienced', '', '', '', 'second', '', '', '', '(coll.) modem', '', '', 'small amount', '', '', '', 'yes', '', 'a lot of', 'to be happy', '', 'major', '', '', 'to guard', 'very', '', 'to produce', '', '', 'good to', '', '', 'profession', 'existing', '', '', '', 'to allocate', 'meal', '', '', 'first', '', '', 'essence', '', '', 'CL:個|个[ge4],輪|轮[lun2]', 'to exist', '', 'to serve (in the military, a prison sentence etc)', '', '', 'source', '', 'CL:家[jia1]', '', 'ever since', '', 'speck']
+	
 	var hsk1_rem = [...hsk1];
 	var hsk1_pinyin_rem = [...hsk1_pinyin];
 	var hsk1_def_rem = [...hsk1_def];
+	var hsk1_def2_rem = [...hsk1_def2];
+	var hsk1_def3_rem = [...hsk1_def3];
+	var hsk1_def4_rem = [...hsk1_def4];
 
 
 		var randomDiv = document.getElementById("myRandomDiv");
 		var randomPinyinDiv = document.getElementById("myRandomPinyinDiv");
 		var randomDefDiv = document.getElementById("myRandomDefDiv");		
+		var randomDef2Div = document.getElementById("myRandomDef2Div");		
+		var randomDef3Div = document.getElementById("myRandomDef3Div");		
+		var randomDef4Div = document.getElementById("myRandomDef4Div");		
 
 		randomDiv.innerHTML = "一"; 
 		randomPinyinDiv.innerHTML= "Yī";
 		randomDefDiv.innerHTML= "One";
+		randomDef2Div.innerHTML= "";
+		randomDef3Div.innerHTML= "";
+		randomDef4Div.innerHTML= "";
 
 		document.getElementById("progressbar").setAttribute("aria-valuemax", hsk1.length)
 		document.getElementById("progressbar").setAttribute("aria-valuenow", 0)
@@ -108,11 +138,17 @@
 			  newText = hsk1_rem[randomIndex];
 			  newTextPinyin = hsk1_pinyin_rem[randomIndex];
 			  newTextDef = hsk1_def_rem[randomIndex];
+			  newTextDef2 = hsk1_def2_rem[randomIndex];
+			  newTextDef3 = hsk1_def3_rem[randomIndex];
+			  newTextDef4 = hsk1_def4_rem[randomIndex];
 			 
 			  
 			  randomDiv.innerHTML = newText;
 			  randomPinyinDiv.innerHTML = newTextPinyin;
 			  randomDefDiv.innerHTML = newTextDef;
+			  randomDef2Div.innerHTML = newTextDef2;
+			  randomDef3Div.innerHTML = newTextDef3;
+			  randomDef4Div.innerHTML = newTextDef4;
 			  
 			  increment();
 			  
@@ -121,10 +157,13 @@
 			    hsk1_rem=[...hsk1];
 				hsk1_pinyin_rem=[...hsk1_pinyin];
 				hsk1_def_rem=[...hsk1_def];
+				hsk1_def2_rem=[...hsk1_def2];
+				hsk1_def3_rem=[...hsk1_def3];
+				hsk1_def4_rem=[...hsk1_def4];
 				resetButton();
 
 			  }
-			  else {hsk1_rem.splice(hsk1_rem[randomIndex],1); hsk1_pinyin_rem.splice(hsk1_rem[randomIndex],1); hsk1_def_rem.splice(hsk1_rem[randomIndex],1);}
+			  else {hsk1_rem.splice(randomIndex,1); hsk1_pinyin_rem.splice(randomIndex,1); hsk1_def_rem.splice(randomIndex,1);}
                                          
 		}, true);                              
 		
@@ -134,3 +173,7 @@
 	</script> 
   </body>
 </html>
+
+
+
+   
